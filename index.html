@@ -21,31 +21,31 @@
       <h1>IP Address Tracker</h1>
     
       <form>
-        <input type="text" placeholder="Search for any IP address or domain">
-        <button type="submit" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
+        <input id="ip-input" type="text" placeholder="Search for any IP address or domain">
+        <button id="submit" type="submit" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
       </form>
       
       <section class="results">
         <div class="result-container">
           <h2 class="result-label">IP Address</h2>
-          <p class="result" id="address"></p>
+          <p class="result" id="address">192.212.174.101</p>
         </div>
         <div class="result-container">
           <h2 class="result-label">Location</h2>
-          <p class="result" id="city"></p>
+          <p class="result" id="city">Brooklyn, NY 10001</p>
         </div>
         <div class="result-container">
           <h2 class="result-label">Timezone</h2>
-          <p class="result" id="timezone">UTC </p>
+          <p class="result">UTC <span id="timezone">-05:00</span></p>
         </div>
         <div class="result-container">
           <h2 class="result-label">ISP</h2>
-          <p class="result" id="isp"></p>
+          <p class="result" id="isp">SpaceX Starlink</p>
         </div>
     </div>
     
     <div class="map">
-      
+
     </div>
       
       
