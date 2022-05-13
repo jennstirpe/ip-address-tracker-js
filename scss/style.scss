@@ -14,6 +14,12 @@ body {
     margin: 0;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+
+}
+
 .content {
     width: 100vw;
     height: 19rem;
@@ -47,6 +53,10 @@ body {
             border-bottom-left-radius: .85rem;
             padding-left: 1.5rem;
 
+            &::placeholder {
+                font-size: .85rem;
+            }
+
             &:hover {
                 cursor: pointer;
             }
@@ -74,6 +84,7 @@ body {
         border-radius: .85rem;
         position: absolute;
         top: 10rem;
+        z-index: 10;
 
         .result-container {
             height: 25%;
@@ -98,7 +109,18 @@ body {
     }
 }
 
+#map {
+    height: 80vh;
+    width: 100%;
+    z-index: 1;
+}
 
+
+
+
+
+
+/*  RESPONSIVE STYLES  */
 
 @media only screen and (min-width: 1440px) {
     .content {
