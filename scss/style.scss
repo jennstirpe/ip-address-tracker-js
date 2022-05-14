@@ -9,7 +9,7 @@ $white: hsl(0, 0%, 100%);
 }
 
 body {
-    font-family: 'Rubik', sans-serif;  //400, 500, 700
+    font-family: 'Rubik', sans-serif;
     width: 100%;
     margin: 0;
 }
@@ -17,7 +17,6 @@ body {
 main {
     display: flex;
     flex-direction: column;
-
 }
 
 .content {
@@ -38,6 +37,8 @@ main {
         font-size: 1.75rem;
         font-weight: 400;
     }
+
+    // FORM STYLES
 
     form {
         display: flex;
@@ -62,7 +63,7 @@ main {
             }
         }
 
-        #submit {
+        #submit-btn {
             height: 4rem;
             width: 4rem;
             border: none;
@@ -76,6 +77,8 @@ main {
         }
     }
 
+    // RESULT CONTAINER STYLES
+
     .results {
         background-color: $white;
         padding: 1rem 0;
@@ -85,6 +88,7 @@ main {
         position: absolute;
         top: 10rem;
         z-index: 10;
+        display: none;
 
         .result-container {
             height: 25%;
@@ -105,9 +109,19 @@ main {
                 font-weight: 500;
                 margin: 0;
             }
+
+            .shrink {
+                font-size: 1.25rem;
+            }
         }
     }
+
+    .show {
+        display: block;
+    }
 }
+
+// MAP STYLES
 
 #map {
     height: 80vh;
@@ -129,7 +143,9 @@ main {
         h1  {
             font-size: 2rem;
         }
-    
+
+
+        // FORM STYLES
         form {
             #ip-input {
                 width: 30rem;
@@ -140,11 +156,12 @@ main {
                 }
             }
         }
-    
+
+        // RESULTS CONTAINER STYLES
         .results {
             width: 70rem;
             height: 10rem;
-            display: flex;
+            display: none;
             justify-content: space-evenly;
             top: 12rem;
             box-shadow: 0 4px 3rem -1rem rgba(0, 0, 0, 0.829);
@@ -164,7 +181,7 @@ main {
                     right: 0;
                     height: 50%;
                     width: 3px;
-            }
+                }
     
                 .result-label {
                     font-size: 1rem;
@@ -178,7 +195,15 @@ main {
                     font-weight: 500;
                     height: 80%;
                 }
+
+                .shrink {
+                    font-size: 1.5rem;
+                }
             }
+        }
+
+        .show {
+            display: flex;
         }
     }
 }
