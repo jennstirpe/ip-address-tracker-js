@@ -1,3 +1,4 @@
+const key = config.API_KEY;
 
 // Input elements
 const userInput = document.querySelector("#ip-input");
@@ -11,6 +12,7 @@ const cityDisplay = document.querySelector("#city");
 const timezoneDisplay = document.querySelector("#timezone");
 const ispDisplay = document.querySelector("#isp");
 
+
 // ip address from user input
 let ipAddress = "";
 
@@ -21,7 +23,7 @@ submitBtn.addEventListener("click", (e) => {
     
     // fetch IP info with user input
     const getData = async () => {
-        const res = await axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=at_GjGCwYgFGYI5qkzJ8RUt0rVZ43JYv&ipAddress=${ipAddress}`)
+        const res = await axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=${key}&ipAddress=${ipAddress}`)
         const data = await res.data;
 
         // Abbreviate state name
@@ -35,11 +37,11 @@ submitBtn.addEventListener("click", (e) => {
         timezoneDisplay.innerHTML = `UTC ${data.location.timezone}`;
         ispDisplay.innerHTML = data.isp;
 
-        // Change map view
+        // Change map view when location is changed
         map.flyTo([data.location.lat, data.location.lng], 14);
         
 
-        // Add marker to the map when location exists
+        // Add marker to the map when location is found
         const markerIcon = L.icon({
             iconUrl: "images/icon-location.svg",
             iconSize: [40, 50],
@@ -136,7 +138,7 @@ function abbrState(state){
         ['Wyoming', 'WY'],
     ];
 
-            for(i = 0; i < states.length; i++){
+            for(let i = 0; i < states.length; i++){
             if(states[i][0] == state){
                 return(states[i][1]);
             }
