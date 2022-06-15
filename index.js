@@ -1,4 +1,3 @@
-const key = config.API_KEY;
 
 // Input elements
 const userInput = document.querySelector("#ip-input");
@@ -23,7 +22,7 @@ submitBtn.addEventListener("click", (e) => {
     
     // fetch IP info with user input
     const getData = async () => {
-        const res = await axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=${key}&ipAddress=${ipAddress}`)
+        const res = await axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=at_GjGCwYgFGYI5qkzJ8RUt0rVZ43JYv&ipAddress=${ipAddress}`)
         const data = await res.data;
 
         // Abbreviate state name
