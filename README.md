@@ -14,6 +14,7 @@ LeafletJS -  to generate the map
 ## Contact
 
 Jennifer S. - stirpe.jennifer@gmail.com
+
 [Project link](https://jennstirpe.github.io/ip-address-tracker-js/)
 
 
