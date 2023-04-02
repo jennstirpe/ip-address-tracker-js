@@ -11,6 +11,12 @@ HTML/Sass/JavaScript
 IP Geolocation API by IPify -  to get the IP Address locations
 LeafletJS -  to generate the map
 
+
+### Recent Updates
+Updated main styling
+Cleaned out all unused code and files
+
+
 ## Contact
 
 Jennifer S. - stirpe.jennifer@gmail.com
